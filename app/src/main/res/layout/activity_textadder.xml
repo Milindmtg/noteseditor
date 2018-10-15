@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="12dp"
+    android:orientation="vertical"
+    android:background="@drawable/buttonbg"
+    tools:context=".textadder">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:text="Press The Camera Icon to Scan some Text\nPress and hold the Mic Icon to speak the text\nYou Can use The following Voice Commands to Use Additional Features\nSearch:\tGives a google search result of Text\nSolve:\tSolves The Mathematical Equation in the text \nSave: \tSaves the Text \nClear:Clears the text "
+        android:textColor="@color/colorwhite"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:text="Press And Hold the Mic icon to give the following Commands\nRead All:\t Reads all the previous Text entries\nClear All:\tClears all the previous text files\nSave As Text:\t Saves the File History as a textfile in Storage\n"
+        android:textColor="@color/colorwhite"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/question"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="image"
+        android:src="@drawable/quest"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.807" />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/input"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:hint="You will see input here"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorwhite"
+                android:textSize="30dp"
+                android:textStyle="italic" />
+        </ScrollView>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <ImageButton
+                android:id="@+id/cambutton"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="11dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/cam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.088"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/button"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/microphonesmall"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/savebutton"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="220dp"
+                android:layout_marginStart="220dp"
+                android:background="@android:color/transparent"
+                android:text="Save\n File"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30dp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="12dp"
+        tools:ignore="MissingConstraints">
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="match_parent"
+            android:layout_height="457dp"
+            android:background="@android:color/transparent">
+            <!--<ListView android:id="@+id/listinflow"
+                android:layout_width="173dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"/>-->
+            <TextView
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/disp2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorwhite"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.843" />
+
+        <ImageButton
+            android:id="@id/button5"
+            android:layout_width="129dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/microphonesmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.986" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

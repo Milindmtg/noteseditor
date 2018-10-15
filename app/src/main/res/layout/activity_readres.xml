@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:background="@color/colorgreen"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HEAR WHAT U TYPE"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="35dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/voicenotes"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:theme="@style/Base.TextAppearance.AppCompat" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:text="Selected language:"
+            android:id="@+id/button4"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp" />
+    </RelativeLayout>
+<RelativeLayout
+    android:id="@+id/loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Processing..."
+        android:textSize="50dp"
+        android:textStyle="italic"/>
+</RelativeLayout>
+</RelativeLayout>
